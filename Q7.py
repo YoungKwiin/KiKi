@@ -4,6 +4,9 @@ def gugudan():
     while True:
         try:
             num = input("Enter a number between 1 to 9: ")
+            if num == "q":
+                exit()
+
             a = int(float(num))
             float_num = float(num)
 
@@ -13,6 +16,12 @@ def gugudan():
                 return
             else:
                 print("Please enter an integer from 1 to 9, moron")
+        except SystemExit:
+            print('exiting the program')
+            exit()
+        except KeyboardInterrupt:
+            print('\nhit control-c, exiting')
+            exit()
         except:
             print("Invalid input. Please try again")
 
